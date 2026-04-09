@@ -47,15 +47,15 @@ How to Run
 6. https://localhost:xxxx/swagger/index.html (for me, I have to use index.html; otherwise, skip it )
 7. Make sure to install the needed packages I used.
 
-Microsoft.AspNetCore.OpenApi → API metadata
-EFCore.SqlServer → connect to SQL Server
-EFCore.Tools → migrations/database commands
-Swashbuckle → Swagger UI (testing API)
+7.1 Microsoft.AspNetCore.OpenApi → API metadata
+7.2 EFCore.SqlServer → connect to SQL Server
+7.3 EFCore.Tools → migrations/database commands
+7.4 Swashbuckle → Swagger UI (testing API)
 
 8. Open the terminal and paste each one individually to install the package
 
-dotnet add package Microsoft.AspNetCore.OpenApi
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer
-dotnet add package Microsoft.EntityFrameworkCore.Tools
-dotnet add package Swashbuckle.AspNetCore
+8.1 dotnet add package Microsoft.AspNetCore.OpenApi
+8.2 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+8.3 dotnet add package Microsoft.EntityFrameworkCore.Tools
+8.4 dotnet add package Swashbuckle.AspNetCore
     
