@@ -45,3 +45,17 @@ How to Run
 4. Run database migrations: dotnet ef database update
 5. dotnet ef database update
 6. https://localhost:xxxx/swagger/index.html (for me, I have to use index.html; otherwise, skip it )
+7. Make sure to install the needed packages I used.
+
+Microsoft.AspNetCore.OpenApi → API metadata
+EFCore.SqlServer → connect to SQL Server
+EFCore.Tools → migrations/database commands
+Swashbuckle → Swagger UI (testing API)
+
+8. Open the terminal and paste each one individually to install the package
+
+dotnet add package Microsoft.AspNetCore.OpenApi
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+dotnet add package Swashbuckle.AspNetCore
+    
