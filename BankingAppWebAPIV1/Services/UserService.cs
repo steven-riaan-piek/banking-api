@@ -12,13 +12,13 @@ public class UserService
         _repo = repo;
     }
 
-    // 🔍 GET USER
+    // GET USER
     public User GetByUsername(string username)
     {
         return _repo.GetByUsername(username);
     }
 
-    // 🆕 REGISTER
+    // REGISTER
     public bool Register(string username, string password)
     {
         if (_repo.GetByUsername(username) != null)
@@ -37,7 +37,7 @@ public class UserService
         return true;
     }
 
-    // 🔐 LOGIN
+    // LOGIN
     public User Login(string username, string password)
     {
         var user = _repo.GetByUsername(username);
@@ -48,7 +48,7 @@ public class UserService
         return user;
     }
 
-    // 💰 DEPOSIT
+    // DEPOSIT
     public bool Deposit(string username, decimal amount)
     {
         var user = _repo.GetByUsername(username);
@@ -62,7 +62,7 @@ public class UserService
         return true;
     }
 
-    // 💸 WITHDRAW
+    // WITHDRAW
     public bool Withdraw(string username, decimal amount)
     {
         var user = _repo.GetByUsername(username);
@@ -76,10 +76,10 @@ public class UserService
         return true;
     }
 
-    // 🔄 TRANSFER
+    // TRANSFER
     public bool Transfer(string sender, string receiver, decimal amount)
     {
-        // ❌ Prevent self-transfer
+        // Prevent self-transfer
         if (sender.ToLower() == receiver.ToLower())
             return false;
 
@@ -99,7 +99,7 @@ public class UserService
         return true;
     }
 
-    // 📜 HISTORY (basic for now)
+    //  HISTORY
     public List<string> GetHistory(string username)
     {
         var user = _repo.GetByUsername(username);
@@ -107,7 +107,7 @@ public class UserService
         if (user == null)
             return null;
 
-        // Placeholder until we wire Transactions table properly
+        
         return new List<string>
         {
             $"User: {username}",

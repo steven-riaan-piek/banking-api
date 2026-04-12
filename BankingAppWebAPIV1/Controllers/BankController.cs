@@ -15,7 +15,7 @@ public class BankController : ControllerBase
         _service = service;
     }
 
-    // 🔐 REGISTER
+    //  REGISTER
     [HttpPost("register")]
     public IActionResult Register([FromBody] RegisterRequest request)
     {
@@ -25,7 +25,7 @@ public class BankController : ControllerBase
         return Ok("User registered successfully");
     }
 
-    // 🔐 LOGIN
+    //   LOGIN
     [HttpPost("login")]
     public IActionResult Login([FromBody] LoginRequest request)
     {
@@ -37,7 +37,7 @@ public class BankController : ControllerBase
         return Ok("Login successful");
     }
 
-    // 💰 GET BALANCE
+    //   GET BALANCE
     [HttpGet("{username}/balance")]
     public IActionResult GetBalance(string username)
     {
@@ -49,7 +49,7 @@ public class BankController : ControllerBase
         return Ok(user.Balance);
     }
 
-    // 💵 DEPOSIT
+    // DEPOSIT
     [HttpPost("{username}/deposit")]
     public IActionResult Deposit(string username, [FromBody] decimal amount)
     {
@@ -61,7 +61,7 @@ public class BankController : ControllerBase
         return Ok("Deposit successful");
     }
 
-    // 💸 WITHDRAW
+    // WITHDRAW
     [HttpPost("{username}/withdraw")]
     public IActionResult Withdraw(string username, [FromBody] decimal amount)
     {
@@ -73,7 +73,7 @@ public class BankController : ControllerBase
         return Ok("Withdraw successful");
     }
 
-    // 📜 HISTORY
+    // HISTORY
     [HttpGet("{username}/history")]
     public IActionResult History(string username)
     {
@@ -85,7 +85,7 @@ public class BankController : ControllerBase
         return Ok(history);
     }
 
-    // 🔄 TRANSFER
+    // TRANSFER
     [HttpPost("{sender}/transfer/{receiver}")]
     public IActionResult Transfer(string sender, string receiver, [FromBody] decimal amount)
     {

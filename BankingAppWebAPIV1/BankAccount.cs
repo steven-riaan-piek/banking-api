@@ -76,8 +76,8 @@ public class BankAccount
     {
         var lines = new List<string>
         {
-            password,              // line 0
-            Balance.ToString()     // line 1
+            password,              
+            Balance.ToString()     
         };
 
         lines.AddRange(History);
